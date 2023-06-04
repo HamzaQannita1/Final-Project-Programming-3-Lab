@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="618.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Dashbord_patientsController">
+   <children>
+      <AnchorPane fx:id="txt_username_patient" layoutY="3.0" prefHeight="663.0" prefWidth="250.0" style="-fx-background-color: #ddd;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/تنزيل%20(1).jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="lab_info" alignment="CENTER" layoutX="38.0" layoutY="185.0" prefHeight="37.0" prefWidth="172.0" text="Dashboard Patient" textFill="#1350ab">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Separator layoutX="13.0" layoutY="354.0" prefHeight="4.0" prefWidth="225.0" />
+            <Button fx:id="btn_out" layoutX="86.0" layoutY="589.0" mnemonicParsing="false" onAction="#out" prefHeight="37.0" prefWidth="76.0" styleClass="btn" stylesheets="@../css/login_admin.css" text="Out" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="14.0" />
+               </font>
+            </Button>
+            <Separator layoutX="14.0" layoutY="539.0" prefHeight="4.0" prefWidth="225.0" />
+            <Label layoutX="86.0" layoutY="223.0" prefHeight="17.0" prefWidth="93.0" text="Welcome  , ">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txt_username" layoutX="51.0" layoutY="258.0" promptText="user name patient" styleClass="input" stylesheets="@../css/login_admin.css" />
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="49.0" layoutY="377.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/تنزيل.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="btn_app" layoutX="14.0" layoutY="311.0" mnemonicParsing="false" onAction="#add_Appointments" prefHeight="37.0" prefWidth="225.0" styleClass="btn" stylesheets="@../css/login_admin.css" text="Add Appointments" />
+         </children>
+      </AnchorPane>
+      <Separator layoutX="253.0" layoutY="7.0" orientation="VERTICAL" prefHeight="655.0" prefWidth="14.0" />
+      <AnchorPane layoutX="267.0" layoutY="14.0" prefHeight="30.0" prefWidth="708.0" style="-fx-border-color: #1350ab;">
+         <children>
+            <Label fx:id="lab_info4" alignment="CENTER" layoutX="140.0" layoutY="1.0" prefHeight="26.0" prefWidth="394.0" text="Information Patients" textFill="#1350ab">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="264.0" layoutY="54.0" prefHeight="603.0" prefWidth="727.0">
+         <children>
+            <TableView fx:id="Tabel_view_patients" layoutX="7.0" layoutY="30.0" prefHeight="127.0" prefWidth="718.0" stylesheets="@../css/login_admin.css">
+              <columns>
+                <TableColumn fx:id="id_p_col" prefWidth="41.0" text="ID" />
+                  <TableColumn fx:id="user_p_col" prefWidth="98.0" text="User Name" />
+                  <TableColumn fx:id="email_p_col" prefWidth="194.0" text="Email" />
+                  <TableColumn fx:id="phone_p_col" prefWidth="166.0" text="Phone" />
+                  <TableColumn fx:id="age_p_col1" prefWidth="97.0" text="Age" />
+                  <TableColumn fx:id="gender_p_col11" prefWidth="117.0" text="gender" />
+              </columns>
+               <styleClass>
+                  <String fx:value="btn" />
+                  <String fx:value="nav" />
+               </styleClass>
+            </TableView>
+            <TableView fx:id="Tabel_view_doctor" layoutX="5.0" layoutY="450.0" prefHeight="139.0" prefWidth="718.0" stylesheets="@../css/login_admin.css">
+               <columns>
+                  <TableColumn fx:id="id_d_col" prefWidth="41.0" text="ID" />
+                  <TableColumn fx:id="user_d_col" prefWidth="222.0" text="User Name" />
+                  <TableColumn fx:id="email_d_col" prefWidth="282.0" text="Email" />
+                  <TableColumn fx:id="phone_d_col" prefWidth="170.0" text="phone" />
+               </columns>
+               <styleClass>
+                  <String fx:value="nav" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </TableView>
+            <Label fx:id="lab_info41" alignment="CENTER" layoutY="1.0" prefHeight="26.0" prefWidth="199.0" text="Information Patients" textFill="#1350ab">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <Separator layoutX="5.0" layoutY="169.0" prefHeight="4.0" prefWidth="718.0" />
+            <Separator layoutX="5.0" layoutY="403.0" prefHeight="4.0" prefWidth="718.0" />
+            <Label fx:id="lab_info411" alignment="CENTER" layoutX="7.0" layoutY="178.0" prefHeight="26.0" prefWidth="199.0" text="Booked Appointments" textFill="#1350ab">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <TableView fx:id="Tabel_view_BApp" layoutX="7.0" layoutY="213.0" prefHeight="178.0" prefWidth="718.0" stylesheets="@../css/login_admin.css">
+               <columns>
+                  <TableColumn fx:id="id_bapp_col" prefWidth="41.0" text="ID" />
+                  <TableColumn fx:id="date_p_bapp_col" prefWidth="167.0" text="appointment_date" />
+                  <TableColumn fx:id="day_p_bapp_col" prefWidth="141.0" text="appointment_day" />
+                  <TableColumn fx:id="time_p_bapp_col" prefWidth="154.0" text="appointment_time" />
+                  <TableColumn fx:id="status_p_bapp_col" prefWidth="71.0" text="status" />
+                  <TableColumn fx:id="comment_col" prefWidth="142.0" text="Doctor Comment" />
+               </columns>
+               <styleClass>
+                  <String fx:value="nav" />
+                  <String fx:value="btn" />
+               </styleClass>
+            </TableView>
+            <Label fx:id="lab_info4111" alignment="CENTER" layoutX="7.0" layoutY="415.0" prefHeight="26.0" prefWidth="250.0" text="Follower doctor information" textFill="#1350ab">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

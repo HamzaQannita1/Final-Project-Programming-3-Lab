@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="751.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AdminController">
+      <children>
+      <StackPane prefHeight="558.0" prefWidth="307.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="image_logo" fitHeight="238.0" fitWidth="221.0" layoutX="43.0" layoutY="91.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/تنزيل.jpg" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn_add_user" layoutX="32.0" layoutY="376.0" mnemonicParsing="false" onAction="#Add_user" prefHeight="32.0" prefWidth="245.0" stylesheets="@../css/login_admin.css" text="Add a new doctor">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="brn_add_patient" layoutX="32.0" layoutY="430.0" mnemonicParsing="false" onAction="#add_patients" prefHeight="32.0" prefWidth="245.0" text="Add anew patients">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <ImageView fx:id="image_p" fitHeight="150.0" fitWidth="200.0" layoutX="458.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/images.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="lab_admin" layoutX="470.0" layoutY="211.0" text="Login Admin" textFill="#0599ff">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_name_admin" layoutX="409.0" layoutY="288.0" prefHeight="27.0" prefWidth="257.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 10; -fx-border-width: 0px 0px 2px 0px;" />
+      <PasswordField fx:id="txt_pass" layoutX="409.0" layoutY="341.0" prefHeight="27.0" prefWidth="257.0" promptText="password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 10; -fx-border-width: 0px 0px 2px 0px;" />
+      <Hyperlink fx:id="forgot" layoutX="470.0" layoutY="479.0" text="Forgot Your Password ?" />
+      <Button fx:id="btn_login" layoutX="458.0" layoutY="403.0" mnemonicParsing="false" onAction="#login_home" prefHeight="32.0" prefWidth="150.0" styleClass="btn_register" stylesheets="@../css/login_admin.css" text="Login " />
+   </children>
+</AnchorPane>

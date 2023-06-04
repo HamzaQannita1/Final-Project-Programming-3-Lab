@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="558.0" prefWidth="759.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Login_patientController">
+   
+    <children>
+      <StackPane prefHeight="558.0" prefWidth="307.0" style="-fx-background-color: #0598ff;">
+         <children>
+            <ImageView fx:id="image_logo" fitHeight="238.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/تنزيل.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </StackPane>
+      <ImageView fx:id="image_p" fitHeight="150.0" fitWidth="200.0" layoutX="458.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/تنزيل.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lab_patient" layoutX="470.0" layoutY="211.0" text="Login Patient" textFill="#0599ff">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt_name_patient" layoutX="444.0" layoutY="291.0" prefHeight="25.0" prefWidth="200.0" promptText="User Name" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 10; -fx-border-width: 0px 0px 2px 0px;" />
+      <PasswordField fx:id="txt_pass" layoutX="444.0" layoutY="344.0" prefHeight="25.0" prefWidth="200.0" promptText="password" style="-fx-background-color: transparent; -fx-border-color: #0598ff; -fx-border-radius: 10; -fx-border-width: 0px 0px 2px 0px;" />
+      <Button fx:id="btn_login" layoutX="463.0" layoutY="403.0" mnemonicParsing="false" onAction="#login" prefHeight="27.0" prefWidth="150.0" style="-fx-background-color: #0598ff; -fx-border-radius: 10;" text="login" />
+      <Hyperlink fx:id="forgot" layoutX="477.0" layoutY="513.0" text="Forgot Your Password ?" />
+      <Hyperlink fx:id="create_p" layoutX="479.0" layoutY="478.0" onAction="#create_p_page" text="+create anew patient" />
+   </children>
+</AnchorPane>
